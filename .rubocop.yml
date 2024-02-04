@@ -1,0 +1,14 @@
+AllCops:
+  NewCops: enable
+
+# Ignore ciclomatic complexity
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+# Method Length size
+Metrics/MethodLength:
+  Max: 20
+
+# Assignment Branch Condition size
+Metrics/AbcSize:
+  Max: 50

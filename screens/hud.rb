@@ -6,8 +6,8 @@ class Hud
 
   def initialize(snake:)
     @snake = snake
-    @score = Text.new('Score: ', x: 500, y: 0, style: 'bold', size: 20, color: 'green', z: 10)
-    @time = Text.new('Time: ', x: 10, y: 0, style: 'bold', size: 20, color: 'green', z: 10)
+    @score = Text.new('Score: ', x: 500, y: 0, style: 'bold', size: 20, color: Settings::HUD_DEFAULT_TEXT_COLOR, z: 10)
+    @time = Text.new('Time: ', x: 10, y: 0, style: 'bold', size: 20, color: Settings::HUD_DEFAULT_TEXT_COLOR, z: 10)
   end
 
   def update(tick:)

@@ -12,3 +12,7 @@ Metrics/MethodLength:
 # Assignment Branch Condition size
 Metrics/AbcSize:
   Max: 50
+
+# Metrics/ClassLength size
+Metrics/ClassLength:
+  Max: 150

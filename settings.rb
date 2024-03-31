@@ -15,6 +15,9 @@ class Settings
   # Game Over screen settings
   GAME_OVER_DEFAULT_TEXT_COLOR = 'purple'
 
+  # HUD screen settings
+  HUD_DEFAULT_TEXT_COLOR = 'green'
+
   # Game sound effects settings
   EAT_APPLE_SOUND_EFFECT = 'assets/audios/eat_apple.wav'
   GAME_OVER_SOUND_EFFECT = 'assets/audios/game_over.wav'

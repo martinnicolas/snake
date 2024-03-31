@@ -122,7 +122,15 @@ class Snake
   end
 
   def update_body(prev_head_location_x, prev_head_location_y)
-    body.unshift(Square.new(x: prev_head_location_x, y: prev_head_location_y, size: 10, color: 'blue', z: 10))
+    body.unshift(
+      Square.new(
+        x: prev_head_location_x,
+        y: prev_head_location_y,
+        size: 10,
+        color: Settings::SNAKE_DEFAULT_BODY_COLOR,
+        z: 10
+      )
+    )
     body.last.remove
     body.pop
   end

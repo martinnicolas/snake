@@ -5,6 +5,7 @@ require_relative '../settings'
 # Class to define and implement Snake logic on game.
 class Snake
   attr_accessor :speed, :head, :body, :direction, :tick
+  attr_reader :previous_tick
 
   LEFT = 'left'
   RIGHT = 'right'
@@ -23,7 +24,11 @@ class Snake
   end
 
   def move
-    return unless (tick % speed).zero?
+    @previous_tick ||= tick unless tick.zero?
+
+    elapsed_time = tick.to_i - previous_tick.to_i
+    desired_interval = 10.0 / speed
+    return if elapsed_time < desired_interval
 
     case direction
     when LEFT
@@ -35,6 +40,8 @@ class Snake
     when DOWN
       move_down
     end
+
+    @previous_tick = tick
   end
 
   def eat_apple

@@ -32,11 +32,13 @@ class GameLogic
   def increase_snake_speed
     case tick
     when 2_000
-      snake.speed = 10
+      snake.speed += 2
     when 8_000
-      snake.speed = 5
+      snake.speed += 2
     when 20_000
-      snake.speed = 2
+      snake.speed += 2
+    when 40_000
+      snake.speed += 2
     end
   end
 

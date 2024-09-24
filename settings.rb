@@ -5,7 +5,7 @@
 class Settings
   # Snake settings
   SNAKE_DEFAULT_DIRECTION = 'up'
-  SNAKE_DEFAULT_SPEED = 15
+  SNAKE_DEFAULT_SPEED = 1
   SNAKE_DEFAULT_HEAD_COLOR = 'blue'
   SNAKE_DEFAULT_BODY_COLOR = 'blue'
 

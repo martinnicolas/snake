@@ -22,6 +22,6 @@ class Hud
   end
 
   def time_text(tick)
-    "Time: #{(tick / 100).to_s.rjust(4, '0')}"
+    "Time: #{(tick / 60).to_s.rjust(4, '0')}"
   end
 end

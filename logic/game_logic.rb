@@ -30,15 +30,12 @@ class GameLogic
   end
 
   def increase_snake_speed
-    case tick
-    when 2_000
+    if tick == 3_600
+      # 2 minutes
       snake.speed += 2
-    when 8_000
-      snake.speed += 2
-    when 20_000
-      snake.speed += 2
-    when 40_000
-      snake.speed += 2
+    elsif tick >= 10_800 && (tick % 7200).zero?
+      # after 3 minutes and every 2 minutes
+      snake.speed += 1
     end
   end
 
